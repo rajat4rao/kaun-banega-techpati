@@ -1,0 +1,61 @@
+GET http://localhost:3000/
+
+#####
+
+# ! LOGIN REQUEST
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "username": "user0",
+    "password": "pass0"
+}
+
+####
+
+# ! REGISTER REQUEST
+GET http://localhost:3000/user/new
+Content-Type: application/json
+
+{
+    "username": "user1",
+    "password": "pass0",
+    "points": 0,
+    "profilePicture": "IMAGE IN BUFFER FORMAT",
+}
+
+####
+
+# ! GET USER DATA REQUEST
+GET http://localhost:3000/user/66a10d90d0613d38d8fd6d1d
+Content-Type:  application/json
+
+#####
+
+# ! ADD POINTS TO USER
+PUT http://localhost:3000/user/66a881e6281ca9f1452c80b0
+Content-Type: application/json
+
+{
+    "points": 3000
+}
+
+#####
+
+# ! CHANGE USERNAME
+PUT http://localhost:3000/user/username/66a10d90d0613d38d8fd6d1d
+Content-Type: application/json
+
+{
+    "newUsername": "rajat"
+}
+
+#####
+
+# ! CHANGE PROFILE PICTURE
+PUT http://localhost:3000/user/picture/66a0b95f7b3b91fa11ce9aad
+Content-Type: application/json
+
+{
+    "profilePicture": "IMAGE IN BUFFER FORMAT"
+}
